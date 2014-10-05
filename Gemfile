@@ -10,6 +10,8 @@ gem 'turbolinks' # Turbolinks makes following links in your web application fast
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass' #for adding better layout
 gem 'devise'
+gem 'jquery-turbolinks'
+gem 'masonry-rails', '~> 0.2.0'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
