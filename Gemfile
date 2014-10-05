@@ -13,7 +13,7 @@ gem 'devise'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
 
-#Social Media Sign Up
+#Social Media Sign Up for twitter facebook and linked in
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
