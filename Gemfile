@@ -16,7 +16,9 @@ gem 'masonry-rails', '~> 0.2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
+
 group :development, :test do
+ 	 gem 'foreman'
      gem 'sqlite3'
 end
 
