@@ -15,5 +15,7 @@
 /log/*.log
 /tmp
 /public/system/*
-/.env
-/Procfile
+
+#Ignore environment files and procfile
+.ENV
+Procfile
