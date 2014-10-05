@@ -9,6 +9,7 @@ gem 'jquery-rails' # Use jquery as the JavaScript library
 gem 'turbolinks' # Turbolinks makes following links in your web application faster. R
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass' #for adding better layout
+gem 'devise'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
