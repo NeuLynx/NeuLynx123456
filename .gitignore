@@ -17,5 +17,6 @@
 /public/system/*
 
 #Ignore environment files and procfile
-.ENV
+.DS_Store
+.env
 Procfile
