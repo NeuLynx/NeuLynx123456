@@ -13,6 +13,12 @@ gem 'devise'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
 
+#Social Media Sign Up
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
