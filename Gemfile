@@ -12,6 +12,8 @@ gem 'bootstrap-sass' #for adding better layout
 gem 'devise'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
+gem 'authority'
+
 
 #Social Media Sign Up for twitter facebook and linked in and google
 gem 'omniauth'
@@ -26,6 +28,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 group :development, :test do
  	 gem 'foreman'
      gem 'sqlite3'
+     gem 'better_errors'
+     gem 'binding_of_caller'
 end
 
 group :production do

@@ -1,16 +1,35 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '70a69148ea928050c7ebd18c38798e88e182e9daebe4af84d8da03428b5a8a56f061079fbd0b637386d51f920986d241fa36d2f72fbb03550d48bf0ca9fb1661'
+  # config.secret_key = '346c8a0a30d2a86c393d8c73aa8f3b29a3747751de1799fe230655df80b1f5cc818ea40c0f3a5bc44291b2b98c4bae9a0387f6f434566b1d620c715bf1ab7871'
+
+
+#require "omniauth-google-oauth2"
+#config.omniauth :google_oauth2, "593964059887-1iu3hoickj7f8lecag2c4toat275nk8f.apps.googleusercontent.com", "leb68vzMEK4eKJsUareKuFGd", { access_type: "offline", approv
+  
+#require "omniauth-facebook"
+#config.omniauth :facebook, "APP_ID", "APP_SECRET"
+
+#require 'omniauth-twitter'
+#config.omniauth :twitter ,"API_KEY", "API_SECRET"
+
+
+  # The secret key used by Devise. Devise uses this key to generate
+  # random tokens. Changing this key will render invalid all existing
+  # confirmation, reset password and unlock tokens in the database.
+  # config.secret_key = 'e3da2dfa18b67b370048e79e1073ddbc18dbdc39d97c87371c59960ae26c47b9eb1dfda96a1699ce5cc0b0164d4134624d4ce94e4ad083c78491da551a15c348'
+
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+
+  config.mailer_sender = 'Ronald@neulynx.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -97,7 +116,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'cba88be7692b523a5bcc7494fffc78ecfcdb654c31b321ace72ddf478ca2ea1b8eb96298e9aabceb208a6707c19cdec7694553c014fbb14b96c6905d81599265'
+
+  # config.pepper = '0f46480a7bbaa47e9a9fb2492ec5a20bcb22bcd3320257240f62f66019bb4600b62928261b0a341499a1b1646fc843a8a1e5c69eff99a703c50b78863101e6e5'
+
+  # config.pepper = '9104fbb0dcbdd99ba18194626e4588c8319bd263c744b5103b21feaa97a9d00967a207371954f485e09811a80d4325637e43d396d0ec745a014d4a108733ff96'
+
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -119,7 +142,11 @@ Devise.setup do |config|
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
   # db field (see migrations). Until confirmed, new email is stored in
   # unconfirmed_email column, and copied to email column on successful confirmation.
+
   config.reconfirmable = true
+
+  config.reconfirmable = false
+
 
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [ :email ]
@@ -127,6 +154,7 @@ Devise.setup do |config|
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
   # config.remember_for = 2.weeks
+
 
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
@@ -181,6 +209,27 @@ Devise.setup do |config|
   # Warn on the last attempt before the account is locked.
   # config.last_attempt_warning = false
 
+  # Defines which strategy will be used to lock an account.
+    config.lock_strategy = :failed_attempts
+
+    # Defines which key will be used when locking and unlocking an account
+    config.unlock_keys = [ :email ]
+
+    # Defines which strategy will be used to unlock an account.
+    # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
+    config.unlock_strategy = :both
+
+    # Number of authentication tries before locking an account if lock_strategy
+    # is failed attempts.
+    config.maximum_attempts = 5
+
+    # Time interval to unlock the account if :time is enabled as unlock_strategy.
+    config.unlock_in = 2.hours
+
+      # Warn on the last attempt before the account is locked.
+      config.last_attempt_warning = true
+
+
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
@@ -233,6 +282,11 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+
+  config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"]
+  config.omniauth :twitter, ENV["TW_API_KEY"], ENV["TW_API_SECRET"]
+  config.omniauth :linkedin, ENV["IN_API_KEY"], ENV["IN_API_SECRET"]
+
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  devise_for :users
   root "pages#home"
   get "about" => "pages#about"
-  get "contact_us" =>"pages#contact_us"
+  get "contact" =>"pages#contact"
+
+ match '/profile/:id/finish_signup' => 'pages#finish_signup', via: [:get, :patch], :as => :finish_signup
+
+  # devise_for :users
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
