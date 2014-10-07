@@ -1,6 +1,3 @@
-
-<div class="panel panel-default">
-  <div class="panel-heading">
 <div id="add-email" class="container">
   <h2>Add Email</h2>
   <%= form_for(current_user, :as => 'user', :url => finish_signup_path(current_user), :html => { role: 'form'}) do |f| %>
@@ -21,7 +18,5 @@
     <div class="actions">
       <%= f.submit 'Continue', :class => 'btn btn-default' %>
     </div>
-   <% end %>
-   </div>
-   </div>
- </div>
+  <% end %>
+</div>
