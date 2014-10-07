@@ -33,6 +33,7 @@ module ApplicationHelper
     when 'facebook' then link_to( 'Go to Facebook', "http://www.facebook.com" )
     when "twitter" then link_to( 'Go to Twitter', "http://twitter.com" )
     when "linkedin" then link_to( 'Go to Linkedin', "http://linkedin.com" )
+    when "google_oauth2" then link_to( 'Go to Google+', "plus.google.com" )
     end
 
   end

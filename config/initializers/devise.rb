@@ -286,7 +286,7 @@ Devise.setup do |config|
   config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"]
   config.omniauth :twitter, ENV["TW_API_KEY"], ENV["TW_API_SECRET"]
   config.omniauth :linkedin, ENV["IN_API_KEY"], ENV["IN_API_SECRET"]
-
+  config.omniauth :google_oauth2, ENV["GP_API_KEY"], ENV["GP_API_SECRET"]
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

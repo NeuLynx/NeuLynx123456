@@ -13,6 +13,8 @@ gem 'devise'
 gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'authority'
+gem 'simple_form'
+
 
 
 #Social Media Sign Up for twitter facebook and linked in and google
@@ -20,6 +22,7 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
+gem "omniauth-google-oauth2"
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
