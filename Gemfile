@@ -16,7 +16,7 @@ gem 'authority'
 gem 'simple_form'
 gem "table_print", "~> 1.0.0"
 
-
+#The Map
 
 #Social Media Sign Up for twitter facebook and linked in and google
 gem 'omniauth'
