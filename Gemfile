@@ -14,6 +14,7 @@ gem 'jquery-turbolinks'
 gem 'masonry-rails', '~> 0.2.0'
 gem 'authority'
 gem 'simple_form'
+gem "table_print", "~> 1.0.0"
 
 
 
