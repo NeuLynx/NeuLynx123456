@@ -1,13 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, :finish_signup
 
-  def index
-    @users = User.all
-      @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
-      marker.infowindow user.description
-  end 
+  
   def finish_signup
     if request.patch? && params[:user] #&& params[:user][:email]
       if current_user.update(user_params)
